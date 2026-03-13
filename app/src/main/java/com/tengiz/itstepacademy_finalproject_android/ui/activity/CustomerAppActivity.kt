@@ -1,6 +1,7 @@
 package com.tengiz.itstepacademy_finalproject_android.ui.activity
 
 import android.os.Bundle
+import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -35,6 +36,21 @@ class CustomerAppActivity : AppCompatActivity() {
 
     private fun setup() {
         setupBottomNavigation()
+        setupBackPressed()
+    }
+
+    private fun setupBackPressed() {
+        val navHostFragment = supportFragmentManager
+            .findFragmentById(binding.fragmentContainerView.id) as androidx.navigation.fragment.NavHostFragment
+        navController = navHostFragment.navController
+
+        // 3. Setup back button logic
+        onBackPressedDispatcher.addCallback(this, true) {
+            if (!navController.popBackStack()) {
+                finish()
+            }
+        }
+
     }
 
     private fun setupBottomNavigation() {
@@ -70,4 +86,8 @@ class CustomerAppActivity : AppCompatActivity() {
             true
         }
     }
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
 }

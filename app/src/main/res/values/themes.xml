@@ -2,22 +2,25 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ITStepAcademy_FinalProject_Android" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/primary_light</item>
         <item name="android:colorControlHighlight"> @color/primary_light </item>
 
         <!-- Global TextInputLayout style -->
-        <item name="textInputStyle">@style/Widget.ITStepAcademy.TextInputLayout</item>
+<!--        I no loner need it since I changed primary color for everything-->
+<!--        <item name="textInputStyle">@style/Widget.ITStepAcademy.TextInputLayout</item>-->
+
     </style>
 
+
     <!-- Custom TextInputLayout style -->
-    <style name="Widget.ITStepAcademy.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <!-- Box stroke color when focused -->
-        <item name="boxStrokeColor">@color/primary_light</item>
-        <!-- Hint text color -->
-        <item name="hintTextColor">@color/primary_light</item>
-        <!-- Optional: error color -->
-        <item name="errorTextColor">@color/design_default_color_error</item>
-    </style>
+<!--    <style name="Widget.ITStepAcademy.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">-->
+<!--        &lt;!&ndash; Box stroke color when focused &ndash;&gt;-->
+<!--        <item name="boxStrokeColor">@color/primary_light</item>-->
+<!--        &lt;!&ndash; Hint text color &ndash;&gt;-->
+<!--        <item name="hintTextColor">@color/primary_light</item>-->
+<!--        &lt;!&ndash; Optional: error color &ndash;&gt;-->
+<!--        <item name="errorTextColor">@color/design_default_color_error</item>-->
+<!--    </style>-->
 
     <style name="App.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/primary_light</item>
