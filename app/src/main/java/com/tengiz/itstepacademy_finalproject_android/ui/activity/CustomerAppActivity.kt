@@ -61,9 +61,9 @@ class CustomerAppActivity : AppCompatActivity() {
             if(!it.isChecked) {
                 when (it.itemId) {
 
-                    R.id.homeFragment -> {
+                    R.id.homeCustomerAppFragment-> {
                         navController.popBackStack(navController.currentDestination!!.id, true)
-                        navController.navigate(R.id.homeFragment)
+                        navController.navigate(R.id.homeCustomerAppFragment)
                         true
                     }
 
@@ -74,9 +74,9 @@ class CustomerAppActivity : AppCompatActivity() {
                     }
 
 
-                    R.id.userFragment -> {
+                    R.id.userCustomerAppFragment -> {
                         navController.popBackStack(navController.currentDestination!!.id, true)
-                        navController.navigate(R.id.userFragment)
+                        navController.navigate(R.id.userCustomerAppFragment)
                         true
                     }
 

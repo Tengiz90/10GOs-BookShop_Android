@@ -29,7 +29,7 @@
             app:destination="@id/categoryBooksFragment" />
     </fragment>
     <fragment
-        android:id="@+id/userhomeCustomerAppFragmentFragment"
+        android:id="@+id/userCustomerAppFragment"
         android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.customer_app.UserCustomerAppFragment"
         android:label="fragment_user"
         tools:layout="@layout/fragment_user_customer_app" >
