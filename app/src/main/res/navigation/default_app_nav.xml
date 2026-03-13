@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/default_app_nav"
+    app:startDestination="@id/defaultAppHomeFragment">
+    <fragment
+        android:id="@+id/defaultAppHomeFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.default_app.DefaultAppHomeFragment"
+        android:label="fragment_default_app_home"
+        tools:layout="@layout/fragment_default_app_home" >
+        <action
+            android:id="@+id/action_defaultAppHomeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_defaultAppHomeFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.default_app.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.default_app.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>

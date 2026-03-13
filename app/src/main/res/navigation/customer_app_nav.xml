@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeCustomerAppFragment">
+
+    <fragment
+        android:id="@+id/homeCustomerAppFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.customer_app.HomeCustomerAppFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_customer_app" >
+        <action
+            android:id="@+id/action_homeCustomerAppFragment_to_authorFragment"
+            app:destination="@id/authorFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.customer_app.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <action
+            android:id="@+id/action_categoryFragment_to_categoryBooksFragment"
+            app:destination="@id/categoryBooksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userhomeCustomerAppFragmentFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.customer_app.UserCustomerAppFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user_customer_app" >
+        />
+    </fragment>
+    <fragment
+        android:id="@+id/authorFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.customer_app.AuthorFragment"
+        android:label="fragment_author"
+        tools:layout="@layout/fragment_author" >
+        <argument
+            android:name=" author"
+            app:argType="com.tengiz.itstepacademy_finalproject_android.model.Author" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryBooksFragment"
+        android:name="com.tengiz.itstepacademy_finalproject_android.ui.element.customer_app.CategoryBooksFragment"
+        android:label="fragment_category_books"
+        tools:layout="@layout/fragment_category_books" />
+</navigation>
