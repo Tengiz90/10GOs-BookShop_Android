@@ -2,6 +2,7 @@ package com.tengiz.itstepacademy_finalproject_android.di
 
 import android.content.Context
 import android.util.Log.d
+import com.tengiz.itstepacademy_finalproject_android.data.local.SecureStorage
 import com.tengiz.itstepacademy_finalproject_android.data.remote.BookShopApi
 import dagger.Module
 import dagger.Provides
@@ -40,5 +41,18 @@ object AppModule {
     @Singleton
     fun provideMyApi(retrofit: Retrofit): BookShopApi {
         return retrofit.create(BookShopApi::class.java)
+    }
+
+    @Module
+    @InstallIn(SingletonComponent::class)
+    object AppModule {
+
+        @Provides
+        @Singleton
+        fun provideSecureStorage(@ApplicationContext context: Context): SecureStorage {
+            return SecureStorage(context)
+        }
+
+        // ... other providers
     }
 }

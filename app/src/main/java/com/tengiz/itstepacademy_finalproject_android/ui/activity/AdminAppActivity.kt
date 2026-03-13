@@ -10,7 +10,9 @@ import androidx.navigation.NavController
 import com.tengiz.itstepacademy_finalproject_android.R
 import com.tengiz.itstepacademy_finalproject_android.databinding.ActivityAdminAppBinding
 import com.tengiz.itstepacademy_finalproject_android.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AdminAppActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAdminAppBinding
     private lateinit var navController: NavController

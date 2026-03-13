@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.tengiz.itstepacademy_finalproject_android.databinding.FragmentHomeCustomerAppBinding
 import com.tengiz.itstepacademy_finalproject_android.ui.adapter.HomeBooksAdapter
 import com.tengiz.itstepacademy_finalproject_android.ui.common.BaseFragment
-import com.tengiz.itstepacademy_finalproject_android.ui.viewmodel.HomeBooksViewModel
+import com.tengiz.itstepacademy_finalproject_android.ui.viewmodel.HomeBooksUserAppViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -19,7 +19,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class HomeCustomerAppFragment : BaseFragment<FragmentHomeCustomerAppBinding>(FragmentHomeCustomerAppBinding::inflate) {
 
-    private val viewModel: HomeBooksViewModel by viewModels()
+    private val viewModel: HomeBooksUserAppViewModel by viewModels()
     private lateinit var adapter: HomeBooksAdapter
 
     override fun setup() {

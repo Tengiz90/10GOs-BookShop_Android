@@ -186,7 +186,7 @@
                 android:id="@+id/postalEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Postal Code"/>
+                android:hint="Postal Code (Optional)"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 

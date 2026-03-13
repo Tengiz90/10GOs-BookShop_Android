@@ -17,7 +17,7 @@ import kotlinx.coroutines.flow.flatMapLatest
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeBooksViewModel @Inject constructor(
+class HomeBooksUserAppViewModel @Inject constructor(
     private val repository: BookShopRepository
 ) : ViewModel() {
 
